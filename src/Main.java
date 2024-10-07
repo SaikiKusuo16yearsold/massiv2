@@ -3,22 +3,19 @@ public class Main {
     public static void main(String[] args) {
         int[] array_1 = {4, 3, 6, 5, 20};
         int counter = 0;
-        for (int i = 0; i < array_1.length; i++) {
-            counter += array_1[i];
+        for (int value : array_1) {
+            counter += value;
         }
         System.out.print("Сумма трат за месяц составила " + counter + " рублей");
         System.out.println();
         int minimal = 100;
         int maximum = 0;
-        for (int i = 0; i < array_1.length; i++) {
-            if (array_1[i] < minimal) {
-                minimal = array_1[i];
-                if (array_1[i] > maximum) {
-                    maximum = array_1[i];
-                }
-            } else if (array_1[i] > maximum) {
-                maximum = array_1[i];
-
+        for (int k : array_1) {
+            if (k < minimal) {
+                minimal = k;
+            }
+            if (k > maximum) {
+                maximum = k;
             }
         }
         System.out.println("Минимальная сумма трат за неделю составила " + minimal + " рублей");
@@ -27,8 +24,8 @@ public class Main {
 
         int[] week = {4, 3, 6, 5, 20};
         int all = 0;
-        for (int i = 0; i < week.length; i++) {
-            all += week[i];
+        for (int j : week) {
+            all += j;
         }
         float middle = all / 5f;
         System.out.println("Средняя сумма трат за месяц составила " + middle + " рублей");
